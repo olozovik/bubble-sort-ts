@@ -1,7 +1,10 @@
-export class StringCollection {
+import { Sorter } from './Sorter';
+
+export class StringCollection extends Sorter {
     data: string;
 
     constructor(data: string) {
+        super();
         this.data = data;
     }
 
@@ -23,6 +26,6 @@ export class StringCollection {
         arr[leftIdx] = arr[rightIdx];
         arr[rightIdx] = temp;
 
-        this.data = arr.join('');
+        this.data = arr.join('').trim();
     }
 }

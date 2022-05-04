@@ -10,7 +10,8 @@ class StringCollection {
     }
     compare(leftIdx, rightIdx) {
         var _a;
-        return (this.data[leftIdx].toLowerCase() > ((_a = this.data[rightIdx]) === null || _a === void 0 ? void 0 : _a.toLowerCase()));
+        return (this.data[leftIdx].toLowerCase() >
+            ((_a = this.data[rightIdx]) === null || _a === void 0 ? void 0 : _a.toLowerCase()));
     }
     swap(leftIdx, rightIdx) {
         const arr = this.data.split('');

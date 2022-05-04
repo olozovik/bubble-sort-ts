@@ -1,23 +1,28 @@
 export class StringCollection {
-  constructor(public data: string) {}
+    data: string;
 
-  get length(): number {
-    return this.data.length;
-  }
+    constructor(data: string) {
+        this.data = data;
+    }
 
-  compare(leftIdx: number, rightIdx: number): boolean {
-    return (
-      this.data[leftIdx].toLowerCase() > this.data[rightIdx]?.toLowerCase()
-    );
-  }
+    get length(): number {
+        return this.data.length;
+    }
 
-  swap(leftIdx: number, rightIdx: number): void {
-    const arr = this.data.split('');
+    compare(leftIdx: number, rightIdx: number): boolean {
+        return (
+            this.data[leftIdx].toLowerCase() >
+            this.data[rightIdx]?.toLowerCase()
+        );
+    }
 
-    const temp = arr[leftIdx];
-    arr[leftIdx] = arr[rightIdx];
-    arr[rightIdx] = temp;
+    swap(leftIdx: number, rightIdx: number): void {
+        const arr = this.data.split('');
 
-    this.data = arr.join('');
-  }
+        const temp = arr[leftIdx];
+        arr[leftIdx] = arr[rightIdx];
+        arr[rightIdx] = temp;
+
+        this.data = arr.join('');
+    }
 }
